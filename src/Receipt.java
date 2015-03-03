@@ -10,52 +10,45 @@
  */
 
 import java.util.*;
-                
+
 public class Receipt {
-   
+    
     public Receipt() {
-        list = new ArrayList<Store>();
+        storeName = null;
+        list = new ArrayList<Item>();
     }
+    
+    public Receipt(String name) {
+        storeName = name; 
+        list = new ArrayList<Item>();
+    }
+    
+    public String getStoreName() {
+        return storeName;
+    }
+    
+    public void setStoreName(String name) {
+        storeName = name;
+    }
+    
     public void addItem(Item anItem) {
-        Iterator<Store> it = list.iterator();
-        Store current;
-        boolean found = false;
-        while(it.hasNext()) {
-            current = it.next();
-            if(current == anItem.getStore()) {
-                current.addItem(anItem);
-                found = true;
-            }
-        }
-        if(!found) {
-            list.add(anItem.getStore());
-            addItem(anItem);
-        }
-    }
-    public void removeItem() {
-        
-    }
-    public boolean searchItem(Item anItem) {
-        Iterator<Store> it = list.iterator();
-        Store current;
-        while(it.hasNext()) {
-            current = it.next();
-            if(current == anItem.getStore()) {
-                return true;
-            }
-        }
-        return false;
+        list.add(anItem);
     }
     
-    public void display_all() {
-        Iterator<Store> it = list.iterator();
-        Store current;
+    
+    public void displayList() {
+        Iterator<Item> it = list.iterator();
+        Item current;
         while(it.hasNext()) {
             current = it.next();
-            current.displayList();
+            System.out.println(current.toString());
         }
     }
     
-    private List<Store> list;
+    public String toString() {
+        return storeName;
+    }
     
+    private String storeName;
+    private List<Item> list;
 }

@@ -21,7 +21,7 @@ public class Item {
         this.Transaction = null;
     }
     
-    public Item(int number, int price, String name, String desc, Store storeName, Type stuff) {
+    public Item(int number, int price, String name, String desc, Receipt storeName, Type stuff) {
         this.ItemNumber = number;
         this.Price = price;
         this.Name = name;
@@ -45,7 +45,7 @@ public class Item {
     public String getDescription() {
         return this.Description;
     }
-    public Store getStore() {
+    public Receipt getStore() {
         return this.store;
     }
 
@@ -68,7 +68,7 @@ public class Item {
     private Integer Price;
     private String Name;
     private String Description;
-    private Store store;
+    private Receipt store;
     private Type Transaction;
     public enum Type {debit, credit, cash};
 }
