@@ -6,10 +6,13 @@
 
 /**
  *
- * @author brandan
+ * @author kalebstriplin
  */
-public class Main {
-    public static void main(String[] args) {
-       
-    } 
+public class Credit extends Account {
+    private String cardNumber;
+    
+    public String getType() {
+        return "Credit";
+    }
+    
 }

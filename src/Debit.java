@@ -6,10 +6,14 @@
 
 /**
  *
- * @author brandan
+ * @author kalebstriplin
  */
-public class Main {
-    public static void main(String[] args) {
-       
-    } 
+public class Debit extends Account {
+    private String cardNumber;
+    private Integer PIN;
+    
+    
+    public String getType() {
+        return "Debit";
+    }
 }

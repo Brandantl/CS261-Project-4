@@ -6,10 +6,12 @@
 
 /**
  *
- * @author brandan
+ * @author kalebstriplin
  */
-public class Main {
-    public static void main(String[] args) {
-       
-    } 
+public class Loan extends Account {
+    
+    
+    public String getType() {
+        return "Loan";
+    }
 }

@@ -13,28 +13,19 @@
 public class Item {
     
     public Item() {
-        this.ItemNumber = 0;
+        this.Quantity = 0;
         this.Price = 0;
         this.Name = null;
-        this.Description = null;
-        this.store = null;
-        this.Transaction = null;
     }
     
-    public Item(int number, int price, String name, String desc, Receipt storeName, Type stuff) {
-        this.ItemNumber = number;
+    public Item(int number, int price, String name) {
+        this.Quantity = number;
         this.Price = price;
         this.Name = name;
-        this.Description = desc;
-        this.store = storeName;
-        this.Transaction = stuff;
     }
 
-    /*Item() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }*/
-    public int getItemNumber() {
-        return this.ItemNumber;
+    public int getQuantity() {
+        return this.Quantity;
     }
     public int getPrice() {
         return this.Price;
@@ -42,33 +33,21 @@ public class Item {
     public String getName() {
         return this.Name;
     }
-    public String getDescription() {
-        return this.Description;
-    }
-    public Receipt getStore() {
-        return this.store;
-    }
-
-    public Type getTransaction() {
-        return Transaction;
-    }
-    public boolean compare(String aDesc) {
-      if(Description.toLowerCase().contains(aDesc.toLowerCase())) 
+    
+    public boolean compare(String aName) {
+      if(Name.toLowerCase().contains(aName.toLowerCase())) 
           return true;
       else
         return false;
     }
     
     public String toString() {
-        return ItemNumber.toString() + " " + Price.toString() + " " + Name + " " + Description + " " + store.toString() + " " + Transaction.toString() + "\n";
+        return Quantity.toString() + " " + Price.toString() + " " + Name + "\n";
         
     }
 
-    private Integer ItemNumber;
+    private Integer Quantity;
     private Integer Price;
     private String Name;
-    private String Description;
-    private Receipt store;
-    private Type Transaction;
     public enum Type {debit, credit, cash};
 }
