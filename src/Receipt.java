@@ -1,54 +1,44 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+public class Receipt
+{
+    private String total;
 
-/**
- *
- * @author kalebstriplin
- */
+    private String store;
 
-import java.util.*;
+    private Items items;
 
-public class Receipt {
-    
-    public Receipt() {
-        storeName = null;
-        list = new ArrayList<Item>();
+    public String getTotal ()
+    {
+        return total;
     }
-    
-    public Receipt(String name) {
-        storeName = name; 
-        list = new ArrayList<Item>();
+
+    public void setTotal (String total)
+    {
+        this.total = total;
     }
-    
-    public String getStoreName() {
-        return storeName;
+
+    public String getStore ()
+    {
+        return store;
     }
-    
-    public void setStoreName(String name) {
-        storeName = name;
+
+    public void setStore (String store)
+    {
+        this.store = store;
     }
-    
-    public void addItem(Item anItem) {
-        list.add(anItem);
+
+    public Items getItems ()
+    {
+        return items;
     }
-    
-    
-    public void displayList() {
-        Iterator<Item> it = list.iterator();
-        Item current;
-        while(it.hasNext()) {
-            current = it.next();
-            System.out.println(current.toString());
-        }
+
+    public void setItems (Items items)
+    {
+        this.items = items;
     }
-    
-    public String toString() {
-        return storeName;
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [total = "+total+", store = "+store+", items = "+items+"]";
     }
-    
-    private String storeName;
-    private List<Item> list;
 }

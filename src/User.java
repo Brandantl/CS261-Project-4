@@ -1,13 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+public class User
+{
+    private String name;
 
-/**
- *
- * @author kalebstriplin
- */
-public class User {
-    
+    private Banks banks;
+
+    public String getName ()
+    {
+        return name;
+    }
+
+    public void setName (String name)
+    {
+        this.name = name;
+    }
+
+    public Banks getBanks ()
+    {
+        return banks;
+    }
+
+    public void setBanks (Banks banks)
+    {
+        this.banks = banks;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [name = "+name+", banks = "+banks+"]";
+    }
 }
