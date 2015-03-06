@@ -1,4 +1,3 @@
-                 
 public class Users
 {
     private User user;
